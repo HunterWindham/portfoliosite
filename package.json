@@ -1,0 +1,22 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "Hunter Windham's portfolio website.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HunterWindham/portfoliosite.git"
+  },
+  "author": "Hunter Windham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HunterWindham/portfoliosite/issues"
+  },
+  "homepage": "https://github.com/HunterWindham/portfoliosite#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
