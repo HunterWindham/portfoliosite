@@ -1,3 +1,131 @@
-body {
-  background: #444;
-  color: #fff; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif; }
+
+li {
+  list-style: none; }
+
+#intro {
+  height: 100vh;
+  background: url("../img/bg.jpg") no-repeat;
+  z-index: -1;
+  display: grid;
+  place-items: center; }
+  #intro nav {
+    position: fixed;
+    position: top; }
+    #intro nav .innerlinks {
+      padding: 0;
+      place-items: center;
+      height: 5vh; }
+      #intro nav .innerlinks ul li {
+        display: inline;
+        margin: auto; }
+  #intro .row .picholder {
+    display: grid;
+    place-items: center; }
+    #intro .row .picholder .mypic {
+      background: url("../img/tmppic.jpg") no-repeat center;
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      z-index: 0; }
+  #intro .row .textholder {
+    display: grid;
+    place-items: center; }
+    #intro .row .textholder div {
+      text-align: center; }
+      #intro .row .textholder div h1 {
+        font-weight: 1; }
+        #intro .row .textholder div h1 span {
+          font-weight: 800;
+          color: green; }
+
+.black {
+  background-color: #333; }
+  .black li:hover {
+    background-color: #444; }
+
+nav {
+  z-index: 1;
+  transition: 0.5s;
+  height: 2.8rem;
+  width: 100%;
+  color: #eee; }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-items: center; }
+  nav li {
+    width: 15vw;
+    display: inline;
+    float: left;
+    text-align: center; }
+  nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+    text-decoration: none; }
+  nav li:hover {
+    transition: .25s; }
+  nav a#openup {
+    display: none; }
+
+@media screen and (max-width: 580px) {
+  h1 {
+    font-size: 2.8em; }
+  nav {
+    height: auto;
+    border-bottom: 0; }
+    nav ul {
+      display: none;
+      height: auto; }
+    nav li {
+      width: 100%; }
+    nav a {
+      text-align: left;
+      width: 100%;
+      text-indent: 25px;
+      background: #333;
+      border-bottom: 1px solid #555; }
+    nav a:hover {
+      background: #444; }
+    nav a#openup:after {
+      content: "|||";
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-90deg);
+      /* Safari and Chrome */
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 20px; }
+    nav a#openup {
+      display: block;
+      background-color: #333;
+      width: 100%;
+      position: relative; } }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  zoom: 1; }
+
+/* For IE 6/7 (trigger hasLayout) */
