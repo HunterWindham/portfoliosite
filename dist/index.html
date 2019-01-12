@@ -13,16 +13,16 @@
             <ul class='cf'>
                 <div>
                     <li>
-                    <a class="nounderline" href='#intro'>Intro</a>
+                    <a class="nounderline js-anchor-link" href='#intro'>Intro</a>
                     </li>
                     <li>
-                    <a class="nounderline" href='#about'>About</a>
+                    <a class="nounderline js-anchor-link" href='#aboutanchor'>About</a>
                     </li>
                     <li>
-                    <a class="nounderline" href='#work'>Work</a>
+                    <a class="nounderline js-anchor-link" href='#workanchor'>Work</a>
                     </li>
                     <li>
-                    <a class="nounderline" href='#contact'>Contact</a>
+                    <a class="nounderline js-anchor-link" href='#contactanchor'>Contact</a>
                     </li>
                 </div>
             </ul>
@@ -43,18 +43,47 @@
         </div>
     </div>
 
+    <div id="aboutanchor"></div>
     <div id="about">
         <div class="container">
-            Hi
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1>A little about me.</h1>
+                    <p>
+                        I'm very passionate about all fields of software
+                        and love the idea of working in the field one day.
+                    </p>
+                </div> 
+            </div>
+            <div class="row aboutcard">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">one</div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">two</div> 
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">three</div> 
+            </div>
         </div>
     </div>
 
+    <div id="workanchor"></div>
     <div id="work">
         <div class="container">
-            There
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1>Some of my recent work.</h1>
+                    <p>
+                        I'm very passionate about all fields of software
+                        and love the idea of working in the field one day.
+                    </p>
+                </div> 
+            </div>
+            <div class="row workcard">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">one</div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">two</div> 
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">three</div> 
+            </div>
         </div>
     </div>
     
+    <div id="contactanchor"></div>
     <div id="contact">
         <div class="container">
             Friend
@@ -91,6 +120,18 @@
             }
             else{
                 $('.target').removeClass('black');
+            }
+        });
+    </script>
+
+    <script>
+        $('.js-anchor-link').click(function(e){
+            e.preventDefault();
+            var target = $($(this).attr('href'));
+            console.log(target);
+            if(target.length){
+                var scrollTo = target.offset().top;
+                $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
             }
         });
     </script>
