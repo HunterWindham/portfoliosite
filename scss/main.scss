@@ -1,4 +1,4 @@
-$text-color: #eee;
+$text-color: #fff;
 $menu-bg: #333;
 $menu-hover: #444;
 $menu-border: #555;
@@ -18,9 +18,13 @@ li{
     list-style: none;
 }
 
+.nounderline:hover{
+    text-decoration: none;
+    color: $secondarycolor; 
+}
 #intro{
     height: 100vh;
-    background: url("../img/bg.jpg") no-repeat;
+    background: url("../img/bg.jpg") fixed no-repeat;
     z-index: -1;
     // padding: 25vh 0;
     display: grid;
@@ -79,7 +83,12 @@ li{
 
 .black{
     background-color: $menu-bg;
+    li{
+        margin: 0px 5px;
+        border: none;
+    }
     li:hover{
+        border: none;
         background-color: $menu-hover;
     }
 }
@@ -106,6 +115,12 @@ nav {
     display: inline;
     float: left;
     text-align: center;
+    border: 1px solid $text-color;
+    border-radius: 10px;
+    margin: 5px 5px;
+  }
+  li:hover{
+      border: 1px solid $secondarycolor;
   }
 
   a {
