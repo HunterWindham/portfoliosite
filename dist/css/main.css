@@ -5,7 +5,7 @@
   font-weight: 400;
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid black; }
+  color: #fff; }
 
 #aboutanchor, #contactanchor, #workanchor {
   height: 15vh; }
@@ -15,33 +15,27 @@ li {
 
 .nounderline:hover {
   text-decoration: none;
-  color: green;
-  transition: 10s;
-  animation: 10s; }
+  color: blue;
+  transition: .75s;
+  animation: .75s; }
 
 #intro {
   height: 100vh;
-  background: url("../img/bg.jpg") fixed no-repeat;
+  background: url("../img/bg.jpg") fixed no-repeat center;
+  background-size: cover;
   z-index: -1;
   display: grid;
   place-items: center; }
   #intro nav {
     position: fixed;
     position: top; }
-    #intro nav .innerlinks {
-      padding: 0;
-      place-items: center;
-      height: 5vh; }
-      #intro nav .innerlinks ul li {
-        display: inline;
-        margin: auto; }
   #intro .row .picholder {
     display: grid;
     place-items: center; }
     #intro .row .picholder .mypic {
       background: url("../img/tmppic.jpg") no-repeat center;
       border-radius: 50%;
-      border: 3px solid green;
+      border: 3px solid blue;
       width: 250px;
       height: 250px;
       margin: auto;
@@ -55,12 +49,12 @@ li {
         font-weight: 1; }
         #intro .row .textholder div h1 span {
           font-weight: 800;
-          color: green; }
+          color: blue; }
 
 .black {
   background-color: #333; }
   .black li {
-    margin: 0px 5px;
+    margin: 0px;
     border: none; }
   .black li:hover {
     border: none;
@@ -69,7 +63,7 @@ li {
 nav {
   z-index: 1;
   transition: 0.5s;
-  height: 2.8rem;
+  height: 3.1rem;
   width: 100%;
   color: #fff; }
   nav ul {
@@ -79,17 +73,16 @@ nav {
     place-items: center; }
   nav li {
     width: 15vw;
-    display: inline;
     float: left;
     text-align: center;
     border: 1px solid #fff;
     border-radius: 10px;
     margin: 5px 5px; }
   nav li:hover {
-    border: 1px solid green; }
+    border: 1px solid blue; }
   nav a {
     display: inline-block;
-    width: 100px;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     padding: 10px 0;

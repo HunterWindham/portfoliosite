@@ -2,7 +2,7 @@ $text-color: #fff;
 $menu-bg: #333;
 $menu-hover: #444;
 $menu-border: #555;
-$secondarycolor: green;
+$secondarycolor: blue;
 
 *{
     margin: 0;
@@ -11,7 +11,8 @@ $secondarycolor: green;
     font-weight: 400;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid black;
+    // border: 1px solid red;
+    color: #fff;
 }
 
 #aboutanchor, #contactanchor, #workanchor{
@@ -25,12 +26,13 @@ li{
 .nounderline:hover{
     text-decoration: none;
     color: $secondarycolor; 
-    transition: 10s;
-    animation: 10s;
+    transition: .75s;
+    animation: .75s;
 }
 #intro{
     height: 100vh;
-    background: url("../img/bg.jpg") fixed no-repeat;
+    background: url("../img/bg.jpg") fixed no-repeat center;
+    background-size: cover;
     z-index: -1;
     // padding: 25vh 0;
     display: grid;
@@ -40,17 +42,17 @@ li{
         position: fixed;
         position: top;
 
-        .innerlinks{
-            padding: 0;
-            place-items: center;
-            height: 5vh;
-            ul{
-                li{
-                    display: inline;
-                    margin: auto;
-                }
-            }
-        }
+        // .innerlinks{
+        //     padding: 0;
+        //     place-items: center;
+        //     height: 5vh;
+        //     ul{
+        //         li{
+        //             display: inline;
+        //             margin: auto;
+        //         }
+        //     }
+        // }
     }
 
     .row{
@@ -91,7 +93,7 @@ li{
 .black{
     background-color: $menu-bg;
     li{
-        margin: 0px 5px;
+        margin: 0px;
         border: none;
     }
     li:hover{
@@ -105,7 +107,7 @@ nav {
   transition: 0.5s;
   //top: 0; // Fix the menu to the top
   //position: fixed; // Fix the menu to the top
-  height: 2.8rem;
+  height: 3.1rem;
   width: 100%;
 //   background-color: $menu-bg;
   color: $text-color;
@@ -119,7 +121,7 @@ nav {
 
   li {
     width: 15vw;
-    display: inline;
+    // display: inline;
     float: left;
     text-align: center;
     border: 1px solid $text-color;
@@ -132,7 +134,7 @@ nav {
 
   a {
   	display: inline-block;
-	  width: 100px;
+	  width: 100%;
 	  text-align: center;
 	  text-decoration: none;
 	  padding: 10px 0;
